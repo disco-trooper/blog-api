@@ -27,7 +27,7 @@ Check .env.example for example .env config
 ## Usage
 
 ```sh
-npm run start
+npm run serverstart
 ```
 
 ## Author
