@@ -16,6 +16,7 @@ const commentsRouter = require('./routes/comments');
 const app = express();
 require('./auth/auth');
 
+app.use(cors());
 app.use(helmet());
 app.use(compression());
 
@@ -29,12 +30,6 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
-
-app.use(
-  cors({
-    origin: '*',
-  })
-);
 
 app.use(logger('dev'));
 app.use(express.json());
