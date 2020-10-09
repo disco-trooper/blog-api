@@ -1,8 +1,6 @@
 <h1 align="center">blog-api</h1>
 <p>
-  <a href="https://www.npmjs.com/package/blog-api" target="_blank">
-    <img alt="Version" src="https://img.shields.io/npm/v/blog-api.svg">
-  </a>
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/disco-trooper/blog-api/blob/master/LICENSE" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
   </a>
