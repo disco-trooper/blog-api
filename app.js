@@ -27,7 +27,7 @@ app.set('view engine', 'pug');
 
 app.use(
   cors({
-    origin: 'https://hoppscotch.io',
+    origin: '*',
   })
 );
 
