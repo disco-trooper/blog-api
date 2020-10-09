@@ -1,6 +1,18 @@
 const { body, validationResult } = require('express-validator');
 const jwt = require('jsonwebtoken');
 const passport = require('passport');
+const User = require('../models/user');
+
+// GET User Fullname
+exports.getUserFullname = async (req, res, next) => {
+  try {
+    const user = await User.findById(req.params.id);
+    const fullname = user.fullname;
+    return res.json({ fullname });
+  } catch (error) {
+    next(error);
+  }
+};
 
 // GET Login Form
 exports.getLoginForm = async (req, res, next) => {

@@ -8,6 +8,9 @@ router.get('/login', userController.getLoginForm);
 // POST Login Form
 router.post('/login', userController.postLoginForm);
 
+// GET User Details
+router.get('/:id', userController.getUserFullname);
+
 // // GET Signup Form
 // router.get('/signup', userController.getSignupForm);
 

@@ -58,7 +58,6 @@ exports.getPostDetail = async (req, res, next) => {
 // PUT Edited Post
 exports.putEditedPost = async (req, res, next) => {
   try {
-    const oldPost = await Post.findById(req.params.id);
     const post = new Post({
       title: req.body.title,
       text: req.body.text,
