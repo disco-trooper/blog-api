@@ -6,25 +6,25 @@ const debug = require('debug')('auth');
 const createError = require('http-errors');
 
 // Sign-Up strategy
-passport.use(
-  'signup',
-  new localStrategy(
-    { passReqToCallback: true },
-    async (req, username, password, done) => {
-      try {
-        const user = await User.create({
-          username,
-          password,
-          firstname: req.body.firstname,
-          lastname: req.body.lastname,
-        });
-        return done(null, user);
-      } catch (error) {
-        done(error);
-      }
-    }
-  )
-);
+// passport.use(
+//   'signup',
+//   new localStrategy(
+//     { passReqToCallback: true },
+//     async (req, username, password, done) => {
+//       try {
+//         const user = await User.create({
+//           username,
+//           password,
+//           firstname: req.body.firstname,
+//           lastname: req.body.lastname,
+//         });
+//         return done(null, user);
+//       } catch (error) {
+//         done(error);
+//       }
+//     }
+//   )
+// );
 
 // Log-In strategy
 passport.use(

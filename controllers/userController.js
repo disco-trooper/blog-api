@@ -35,18 +35,18 @@ exports.postLoginForm = [
   },
 ];
 
-// GET Signup Form
-exports.getSignupForm = async (req, res, next) => {
-  res.send('GET Signup FORM');
-};
+// // GET Signup Form
+// exports.getSignupForm = async (req, res, next) => {
+//   res.send('GET Signup FORM');
+// };
 
-// POST Signup Form
-exports.postSignupForm = [
-  passport.authenticate('signup', { session: false }),
-  async (req, res, next) => {
-    res.json({
-      message: 'Signup successful',
-      user: req.user,
-    });
-  },
-];
+// // POST Signup Form
+// exports.postSignupForm = [
+//   passport.authenticate('signup', { session: false }),
+//   async (req, res, next) => {
+//     res.json({
+//       message: 'Signup successful',
+//       user: req.user,
+//     });
+//   },
+// ];
