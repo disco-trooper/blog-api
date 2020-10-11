@@ -1,7 +1,8 @@
-const Post = require('../models/post');
+const debug = require('debug')('postController');
 const jwt = require('jsonwebtoken');
 const createError = require('http-errors');
-const debug = require('debug')('postController');
+const Post = require('../models/post');
+const Comment = require('../models/comment');
 
 // GET Published Posts
 exports.getPublishedPosts = async (req, res, next) => {
@@ -78,6 +79,7 @@ exports.putEditedPost = async (req, res, next) => {
 exports.deletePost = async (req, res, next) => {
   try {
     await Post.findByIdAndDelete(req.params.id);
+    await Comment.deleteMany({ post_id: req.params.id });
     res.status(200);
     res.send();
   } catch (error) {

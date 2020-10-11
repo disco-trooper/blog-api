@@ -1,7 +1,7 @@
 const { body, validationResult } = require('express-validator');
-const Comment = require('../models/comment');
-const createError = require('http-errors');
 const debug = require('debug')('commentController');
+const createError = require('http-errors');
+const Comment = require('../models/comment');
 
 // GET Comments
 exports.getComments = async (req, res, next) => {
