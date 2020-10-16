@@ -25,9 +25,7 @@ exports.postNewComment = [
     })
     .withMessage('Name must be between 2 and 25 characters long')
     .escape(),
-  body('text')
-    .trim()
-    .escape(),
+  body('text').trim(),
   async (req, res, next) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
